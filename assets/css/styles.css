@@ -209,10 +209,8 @@ input {
 }
 
 .nav__logo {
-  position: relative;
-  right: 70px;
+  font-size: 40px;
   font-weight: 900;
-  font-size: 35px;
 }
 
 .nav__toggle {
@@ -223,6 +221,14 @@ input {
 .nav__menu {
   position: relative;
 }
+/* @media screen and (max-width: 1500px){
+  .nav__logo {
+    font-size: 40px;
+    font-weight: 900;
+    position: relative;
+    right: 60px;
+  }
+} */
 
 @media screen and (max-width: 767px) {
   .nav__menu {
@@ -308,8 +314,7 @@ input {
 
 .home__container {
   position: relative;
-  bottom: 50px;
-  /* height: calc(100vh - var(--header-height)); */
+  height: calc(100vh - var(--header-height));
   align-content: center;
   row-gap: 3rem;
 }
@@ -323,36 +328,32 @@ input {
 
 .home__data-subtitle {
   position: relative;
-  bottom: 40px;
-  right: 80px;
+  bottom: 60px;
+  right: 60px;
   display: block;
   font-weight: var(--font-semi-bold);
-  font-size: 20px;
   margin-bottom: var(--mb-0-75);
 }
 
 .home__data-title {
   position: relative;
-  right: 90px;
-  bottom: 30px;
-  font-size: 60px;
+  bottom: 60px;
+  right: 70px;
+  font-size: var(--biggest-font-size);
   font-weight: var(--font-medium);
   margin-bottom: var(--mb-2-5);
-  
 }
 
-/* .home__social {
-  position: relative;
-  right: 70px;
+.home__social {
   display: flex;
   flex-direction: column;
   row-gap: 1.5rem;
 }
 
 .home__social-link {
-  font-size: 2.2rem;
+  font-size: 1.2rem;
   width: max-content;
-} */
+}
 
 .home__info {
   background-color: var(--first-color);
@@ -391,9 +392,7 @@ input {
 }
 
 /*=============== BUTTONS ===============*/
-/* .button {
-  position: relative;
-  right: 50px;
+.button {
   display: inline-block;
   background-color: var(--first-color);
   color: var(--white-color);
@@ -404,7 +403,7 @@ input {
 
 .button:hover {
   background-color: var(--first-color-alt);
-} */
+}
 
 .button--flex {
   display: flex;
@@ -821,7 +820,7 @@ input {
 
 /*=============== MEDIA QUERIES ===============*/
 /* For small devices */
-@media screen and (max-width: 340px) {
+@media screen and (min-width: 340px) {
   .place__container {
     grid-template-columns: max-content;
     justify-content: center;
@@ -836,12 +835,29 @@ input {
     width: 80px;
   }
   .home__info {
-    width: 190px;
-    padding: 1rem;
+    margin: 10px;
+  }
+  .home__data-subtitle{
+    left: 13px;
+    font-size: 20px;
+    top: 5px;
+  }
+  .home__data-title{
+    font-size: 43px;
+    left: 10px;
+    top: 4px;
   }
   .experience__img,
   .video__container {
     padding: 0;
+  }
+  .nav__logo{
+    text-align: center;
+    margin: auto;
+    left: 20x;
+  }
+  .home__data{
+    right: 90px;
   }
 }
 
@@ -858,6 +874,21 @@ input {
   .subscribe__form {
     width: 470px;
     margin: 0 auto;
+  }
+
+  .home__container{
+  left: 20px;
+  bottom: 30px;
+  }
+  .home__data-title{
+    font-size: 50px;
+    right: 40px;
+  }
+  .home__data-subtitle{
+    font-size: 20px;
+  }
+  .home__info{
+    right: 30px;
   }
 }
 
@@ -889,6 +920,7 @@ input {
   .nav__toggle, .nav__close {
     display: none;
   }
+
   .change-theme-name {
     display: none;
   }
@@ -928,6 +960,7 @@ input {
   }
   .home__info {
     bottom: 3rem;
+    right: 50px;
   }
   .about__container {
     grid-template-columns: repeat(2, 1fr);
@@ -995,6 +1028,13 @@ input {
   .home__info-img {
     width: 240px;
   }
+
+  .nav__logo{
+    position: relative;
+    right: 70px;
+  }
+
+
   .about__img-one {
     width: 230px;
   }
