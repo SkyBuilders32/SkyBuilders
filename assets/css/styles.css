@@ -813,6 +813,7 @@ input {
 ::-webkit-scrollbar-thumb {
   background-color: var(--scroll-thumb-color);
 }
+ 
 
 ::-webkit-scrollbar-thumb:hover {
   background-color: var(--text-color-light);
