@@ -4,11 +4,11 @@
 /*=============== VARIABLES CSS ===============*/
 :root {
   --header-height: 3rem;
-
+--monomarika: 230;
   /*========== Colors ==========*/
   /* Change favorite color to match images */
   /*Green dark 190 - Green 171 - Grren Blue 200*/
-  --hue-color: 190;
+  --hue-color: 200;
 
   /* HSL color mode */
   --first-color: hsl(var(--hue-color), 64%, 22%);
@@ -18,7 +18,7 @@
   --text-color: hsl(var(--hue-color), 24%, 35%);
   --text-color-light: hsl(var(--hue-color), 8%, 60%);
   --input-color: hsl(var(--hue-color), 24%, 97%);
-  --body-color: hsl(var(--hue-color), 100%, 99%);
+  --body-color: hsl(var(--hue-color ), 100%, 99%);
   --white-color: #FFF;
   --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
   --scroll-thumb-color: hsl(var(--hue-color), 12%, 75%);
@@ -194,6 +194,7 @@ input {
   left: 0;
   z-index: var(--z-fixed);
   background-color: transparent;
+  transition: .4s;
 }
 
 /*=============== NAV ===============*/
@@ -204,43 +205,41 @@ input {
   align-items: center;
 }
 
-.nav__logo, .nav__toggle {
+.nav__logo, .nav__toggle,.nav__close {
   color: var(--white-color);
 }
 
 .nav__logo {
-  font-size: 40px;
-  font-weight: 900;
+  position: relative;
+  align-items: center;
+  left: 10px;
+  font-size: 35px;
+  font-weight: bolder;
 }
 
 .nav__toggle {
-  font-size: 1.2rem;
+  display: inline-flex;
+  font-size: 1.25rem;
   cursor: pointer;
 }
 
 .nav__menu {
   position: relative;
 }
-/* @media screen and (max-width: 1500px){
-  .nav__logo {
-    font-size: 40px;
-    font-weight: 900;
-    position: relative;
-    right: 60px;
-  }
-} */
 
 @media screen and (max-width: 767px) {
   .nav__menu {
     position: fixed;
     background-color: var(--body-color);
+    width: 80%;
+    height: 100%;
     top: 0;
     right: -100%;
-    width: 70%;
-    height: 100%;
-    box-shadow: -1px 0 4px rgba(14, 55, 63, 0.15);
-    padding: 3rem;
-    transition: .4s;
+    box-shadow: -2px 0 4px hsla(var(--hue), 24%, 15%, .1);
+    padding: 4rem 0 0 3rem;
+    border-radius: 1rem 0 0 1rem;
+    transition: .3s;
+    z-index: var(--z-fixed);
   }
 }
 
@@ -262,12 +261,13 @@ input {
 
 .nav__close {
   position: absolute;
-  top: .75rem;
-  right: 1rem;
+  top: 1rem;
+  right: 1.25rem;
   font-size: 1.5rem;
   color: var(--title-color);
   cursor: pointer;
 }
+
 
 /* show menu */
 .show-menu {
